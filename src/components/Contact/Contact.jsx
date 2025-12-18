@@ -1,80 +1,123 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { motion } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
-const Contact = () => {
+const container = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      staggerChildren: 0.12,
+    },
+  },
+};
 
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4 },
+  },
+};
+
+const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Dummy success message
-    toast.success("Message sent successfully! ✅", {
+    toast.success("Message sent successfully! 🚀", {
       theme: "dark",
       autoClose: 2500,
+      position: "top-center",
     });
-
     e.target.reset();
   };
 
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+      className="relative py-24 px-6 sm:px-10 md:px-[8vw] lg:px-[18vw]
+      flex items-center justify-center font-sans"
     >
       <ToastContainer />
 
-      {/* Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          Feel free to reach out — this is a demo contact form
-        </p>
-      </div>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="w-full max-w-4xl"
+      >
+        {/* Title */}
+        <motion.div variants={item} className="text-center mb-20">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-wide">
+            CONTACT
+          </h2>
+          <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-4 rounded-full" />
+          <p className="text-gray-400 mt-6 max-w-xl mx-auto text-base sm:text-lg">
+            Feel free to reach out. This is a demo contact form.
+          </p>
+        </motion.div>
 
-      {/* Form */}
-      <div className="w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
-          Connect With Me 🚀
-        </h3>
-
-        <form onSubmit={handleSubmit} className="mt-4 space-y-4">
-          <input
-            type="email"
-            placeholder="Your Email"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:border-purple-500 outline-none"
-          />
-
-          <input
-            type="text"
-            placeholder="Your Name"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:border-purple-500 outline-none"
-          />
-
-          <input
-            type="text"
-            placeholder="Subject"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:border-purple-500 outline-none"
-          />
-
-          <textarea
-            placeholder="Message"
-            rows="4"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:border-purple-500 outline-none"
-          />
-
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 rounded-md text-white font-semibold hover:opacity-90 transition"
+        {/* Card */}
+        <motion.div
+          variants={item}
+          className="mx-auto w-full max-w-md bg-gray-900/80 backdrop-blur-xl
+          border border-white/10 rounded-2xl p-6 sm:p-8
+          shadow-[0_0_35px_rgba(130,69,236,0.35)]"
+        >
+          <motion.h3
+            variants={item}
+            className="text-xl sm:text-2xl font-semibold text-white text-center mb-6"
           >
-            Send Message
-          </button>
-        </form>
-      </div>
+            Let’s Connect 🤝
+          </motion.h3>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {["Your Email", "Your Name", "Subject"].map((placeholder, i) => (
+              <motion.input
+                key={i}
+                variants={item}
+                type={placeholder === "Your Email" ? "email" : "text"}
+                placeholder={placeholder}
+                required
+                whileFocus={{ scale: 1.02 }}
+                className="w-full p-3 rounded-lg bg-[#131025]/80 text-white
+                border border-gray-600 focus:border-[#8245ec]
+                focus:ring-2 focus:ring-[#8245ec]/40 outline-none transition"
+              />
+            ))}
+
+            <motion.textarea
+              variants={item}
+              rows="4"
+              placeholder="Your Message"
+              required
+              whileFocus={{ scale: 1.02 }}
+              className="w-full p-3 rounded-lg bg-[#131025]/80 text-white
+              border border-gray-600 focus:border-[#8245ec]
+              focus:ring-2 focus:ring-[#8245ec]/40 outline-none transition resize-none"
+            />
+
+            {/* Button */}
+            <motion.button
+              variants={item}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              className="w-full py-3 rounded-lg text-white font-semibold
+              bg-gradient-to-r from-[#8245ec] to-blue-300
+              hover:shadow-[0_0_25px_rgba(130,69,236,0.6)]
+              transition-all duration-300"
+            >
+              Send Message
+            </motion.button>
+          </form>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

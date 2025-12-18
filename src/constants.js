@@ -33,11 +33,14 @@ import vscodeLogo from "./assets/tech_logo/vscode.png";
 import postmanLogo from "./assets/tech_logo/postman.png";
 
 /* ---- Experience / Education / Project Logos ---- */
-
-
+import AaharMenu from "./assets/company_logo/AaharMenu.jpg"
+import Lcit from "./assets/education_logo/lcit.webp"
+import Jindal from "./assets/education_logo/jindal.png"
 /* ====================================
-   SKILLS
+   project
 ===================================== */
+import studyNotion from "./assets/work_logo/studyNotion.png"
+import aiMock from "./assets/work_logo/aiMock.png"
 
 export const SkillsInfo = [
   {
@@ -97,7 +100,7 @@ export const SkillsInfo = [
 export const experiences = [
   {
     id: 0,
-    img: {},
+    img: AaharMenu,
     role: "Frontend Developer (Intern)",
     company: "Aaharmenu",
     date: "Internship",
@@ -117,7 +120,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: {},
+    img: Lcit,
     school: "Lakhmi Chand Institute of Technology",
     location: "Bilaspur, Chhattisgarh",
     degree: "Bachelor of Technology (B.Tech)",
@@ -128,7 +131,7 @@ export const education = [
   },
   {
     id: 1,
-    img: {},
+    img: Jindal,
     school: "Jindal Adarsh School",
     location: "Chhattisgarh",
     degree: "Class XII (CGBSE)",
@@ -136,6 +139,17 @@ export const education = [
     grade: "96.2%",
     desc:
       "Completed higher secondary education with excellent academic performance.",
+  },
+  {
+    id: 3,
+    img: Jindal,
+    school: "Jindal Adarsh School",
+    location: "Chhattisgarh",
+    degree: "Class X (CGBSE)",
+    date: "2021",
+    grade: "77.2%",
+   desc: "Successfully completed Class X under CGBSE with consistent academic performance."
+
   },
 ];
 
@@ -147,7 +161,7 @@ export const projects = [
   {
     id: 0,
     title: "AI Mock Interview Platform",
-    image: {},
+    image: aiMock,
     description:
       "AI-powered interview preparation platform using OpenAI GPT-4 with real-time feedback, Firebase authentication, and serverless backend.",
     tags: [
@@ -162,7 +176,7 @@ export const projects = [
   {
     id: 1,
     title: "StudyNotion E-Tech Platform",
-    image: {},
+    image: studyNotion,
     description:
       "A full-stack course platform with authentication, payments, OTP-based password reset, and Redux state management.",
     tags: [
@@ -174,6 +188,40 @@ export const projects = [
     ],
     type: "Full Stack",
   },
+  {
+  id: 2,
+  title: "DevTinder – Developer Connection App",
+  image: studyNotion, // add project image later
+  description:
+    "A MERN stack-based developer connection platform where users can create profiles, swipe to connect, send connection requests, and build professional networks.",
+  tags: [
+    "MERN Stack",
+    "JWT Authentication",
+    "MongoDB",
+    "Node.js",
+    "Express.js",
+    "React.js",
+  ],
+  type: "Full Stack",
+},
+{
+  id: studyNotion,
+  title: "CodeDocs – Real-Time Document Collaboration",
+  image: studyNotion, // add project image later
+  description:
+    "A real-time collaborative document editing platform that allows multiple users to edit documents simultaneously with live synchronization and version consistency.",
+  tags: [
+    "MERN Stack",
+    "TypeScript",
+    "Socket.io",
+    "Real-Time Collaboration",
+    "MongoDB",
+    "JWT Authentication",
+  ],
+  type: "Full Stack",
+}
+
+
 ];
 
 /* =====================================

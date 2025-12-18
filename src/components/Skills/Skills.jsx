@@ -2,62 +2,123 @@
 import React from "react";
 import { SkillsInfo } from "../../constants";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
+
+/* Container stagger */
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+/* Skill pill animation */
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.85,
+    y: 20,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 14,
+      mass: 0.6,
+    },
+  },
+};
 
 const Skills = () => (
   <section
     id="skills"
-    className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans bg-skills-gradient clip-path-custom"
+    className="relative py-24 px-6 sm:px-10 md:px-[8vw] lg:px-[18vw]
+    font-sans bg-skills-gradient clip-path-custom"
   >
     {/* Section Title */}
-    <div className="text-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-lg font-semibold">
-      A collection of my technical skills and expertise honed through various projects and experiences
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-center mb-20"
+    >
+      <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-wide">
+        SKILLS
+      </h2>
+      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-4 rounded-full" />
+      <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-base sm:text-lg">
+        A collection of my technical skills and expertise gained through
+        real-world projects and hands-on experience.
       </p>
-    </div>
+    </motion.div>
 
     {/* Skill Categories */}
-    <div className="flex flex-wrap gap-1 lg:gap-5 py-10 justify-between">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
       {SkillsInfo.map((category) => (
-        <div
+        <Tilt
           key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 sm:py-6 mb-10 w-full sm:w-[48%] rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+          tiltMaxAngleX={8}
+          tiltMaxAngleY={8}
+          scale={1.02}
+          transitionSpeed={900}
+          glareEnable
+          glareMaxOpacity={0.12}
+          className="w-full"
         >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-400 mb-4 text-center">
-            {category.title}
-          </h3>
-
-          {/* Skill Items - 3 per row on larger screens */}
-          <Tilt
-            key={category.title}
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="bg-gray-900/80 backdrop-blur-xl
+            rounded-2xl p-6 sm:p-8 border border-white/10
+            shadow-[0_0_30px_rgba(130,69,236,0.25)]
+            hover:shadow-[0_0_50px_rgba(130,69,236,0.45)]
+            transition-shadow duration-500"
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+            {/* Category Title */}
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-300 text-center mb-6">
+              {category.title}
+            </h3>
+
+            {/* Skills Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {category.skills.map((skill) => (
-                <div
+                <motion.div
                   key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 sm:py-2 sm:px-2 text-center"
+                  variants={itemVariants}
+                  whileHover={{
+                    scale: 1.08,
+                    boxShadow:
+                      "0 0 20px rgba(130,69,236,0.6)",
+                  }}
+                  className="flex items-center justify-center gap-2
+                  px-3 py-2 rounded-full
+                  border border-[#8245ec]/30
+                  bg-[#8245ec]/5
+                  transition-all duration-300"
                 >
                   <img
                     src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
+                    alt={skill.name}
+                    className="w-5 h-5 sm:w-6 sm:h-6"
                   />
-                  <span className="text-xs sm:text-sm text-gray-300">
+                  <span className="text-xs sm:text-sm text-gray-200">
                     {skill.name}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </Tilt>
-        </div>
+          </motion.div>
+        </Tilt>
       ))}
     </div>
   </section>
