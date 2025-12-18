@@ -43,8 +43,8 @@ import Jindal from "./assets/education_logo/jindal.png"
 /* ====================================
    project
 ===================================== */
-import studyNotion from "./assets/work_logo/studyNotion.png"
-import aiMock from "./assets/work_logo/aiMock.png"
+import studyNotion from "./assets/work_logo/StudyNotion.png"
+import aiMock from "./assets/work_logo/AiMock.png"
 import devtinder from "./assets/work_logo/Devtinder.png"
 
 export const SkillsInfo = [
