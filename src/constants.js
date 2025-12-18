@@ -26,7 +26,7 @@ import sqlLogo from "./assets/tech_logo/mysql.png";
 // Languages
 import cppLogo from "./assets/tech_logo/cpp.png";
 import python from "./assets/tech_logo/python.png"
-import c from "./assets/tech_logo/C.png"
+import c from "./assets/tech_logo/c.png"
 
 // Tools
 import gitLogo from "./assets/tech_logo/git.png";
