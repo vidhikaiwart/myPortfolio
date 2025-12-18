@@ -17,6 +17,7 @@ import gsapLogo from "./assets/tech_logo/gsap.png";
 import nodeLogo from "./assets/tech_logo/nodejs.png";
 import expressLogo from "./assets/tech_logo/express.png";
 import firebaseLogo from "./assets/tech_logo/firebase.png";
+import postgre from "./assets/tech_logo/postgre.png"
 
 // Database
 import mongoLogo from "./assets/tech_logo/mongodb.png";
@@ -24,11 +25,14 @@ import sqlLogo from "./assets/tech_logo/mysql.png";
 
 // Languages
 import cppLogo from "./assets/tech_logo/cpp.png";
+import python from "./assets/tech_logo/python.png"
+import c from "./assets/tech_logo/C.png"
 
 // Tools
 import gitLogo from "./assets/tech_logo/git.png";
 import githubLogo from "./assets/tech_logo/github.png";
 import vscodeLogo from "./assets/tech_logo/vscode.png";
+import vercel from "./assets/tech_logo/vercel.png"
 
 import postmanLogo from "./assets/tech_logo/postman.png";
 
@@ -41,6 +45,7 @@ import Jindal from "./assets/education_logo/jindal.png"
 ===================================== */
 import studyNotion from "./assets/work_logo/studyNotion.png"
 import aiMock from "./assets/work_logo/aiMock.png"
+import devtinder from "./assets/work_logo/Devtinder.png"
 
 export const SkillsInfo = [
   {
@@ -50,7 +55,7 @@ export const SkillsInfo = [
       { name: "CSS", logo: cssLogo },
       { name: "JavaScript", logo: jsLogo },
       { name: "React.js", logo: reactLogo },
-      { name: "Redux Toolkit", logo: reduxLogo },
+      { name: "Redux ", logo: reduxLogo },
       { name: "Tailwind CSS", logo: tailwindLogo },
       { name: "Bootstrap", logo: bootstrapLogo },
       { name: "GSAP", logo: gsapLogo },
@@ -61,24 +66,23 @@ export const SkillsInfo = [
     skills: [
       { name: "Node.js", logo: nodeLogo },
       { name: "Express.js", logo: expressLogo },
-      { name: "Firebase Functions", logo: firebaseLogo },
-      { name: "JWT Authentication", logo: postmanLogo },
-      { name: "Nodemailer", logo: postmanLogo },
-    ],
-  },
-  {
-    title: "Database",
-    skills: [
-      { name: "MongoDB", logo: mongoLogo },
+     
+   
+     
+       { name: "MongoDB", logo: mongoLogo },
       { name: "SQL", logo: sqlLogo },
-      { name: "Firebase Firestore", logo: firebaseLogo },
+      { name: "Postgre", logo: postgre },
+     
     ],
   },
+  
   {
     title: "Languages & DSA",
     skills: [
-      { name: "C++ (DSA)", logo: cppLogo },
+      { name: "C++ ", logo: cppLogo },
       { name: "JavaScript", logo: jsLogo },
+      { name: "python", logo: python},
+      { name: "C", logo: c},
     ],
   },
   {
@@ -87,8 +91,9 @@ export const SkillsInfo = [
       { name: "Git", logo: gitLogo },
       { name: "GitHub", logo: githubLogo },
       { name: "VS Code", logo: vscodeLogo },
-      { name: "npm",  },
-      { name: "Postman",  },
+
+      { name: "Postman", logo: postmanLogo },
+      { name: "vercel", logo: vercel },
     ],
   },
 ];
@@ -159,20 +164,23 @@ export const education = [
 
 export const projects = [
   {
-    id: 0,
-    title: "AI Mock Interview Platform",
-    image: aiMock,
-    description:
-      "AI-powered interview preparation platform using OpenAI GPT-4 with real-time feedback, Firebase authentication, and serverless backend.",
-    tags: [
-      "React.js",
-      "Tailwind CSS",
-      "Shadcn UI",
-      "Firebase",
-      "OpenAI GPT-4",
-    ],
-    type: "Full Stack",
-  },
+  id: 0,
+  title: "AI Mock Interview Platform",
+  image: aiMock,
+  description:
+    "AI-powered interview preparation platform using OpenAI GPT-4 with real-time feedback, Firebase authentication, and a serverless backend.",
+  tags: [
+    "React.js",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Firebase",
+    "OpenAI GPT-4",
+  ],
+  type: "Full Stack",
+  github: "https://github.com/dikeshchouhan1/AI_Mock_Interview",
+
+}
+,
   {
     id: 1,
     title: "StudyNotion E-Tech Platform",
@@ -187,11 +195,13 @@ export const projects = [
       "MongoDB",
     ],
     type: "Full Stack",
+    github: "https://github.com/dikeshchouhan1/EdTech",
+  webapp: "https://study-notion-frontend-one-psi.vercel.app/",
   },
   {
   id: 2,
   title: "DevTinder – Developer Connection App",
-  image: studyNotion, // add project image later
+  image: devtinder, // add project image later
   description:
     "A MERN stack-based developer connection platform where users can create profiles, swipe to connect, send connection requests, and build professional networks.",
   tags: [
@@ -203,23 +213,27 @@ export const projects = [
     "React.js",
   ],
   type: "Full Stack",
+  github: "https://github.com/dikeshchouhan1/DevTinder_Frontend",
+
 },
-{
-  id: studyNotion,
-  title: "CodeDocs – Real-Time Document Collaboration",
-  image: studyNotion, // add project image later
-  description:
-    "A real-time collaborative document editing platform that allows multiple users to edit documents simultaneously with live synchronization and version consistency.",
-  tags: [
-    "MERN Stack",
-    "TypeScript",
-    "Socket.io",
-    "Real-Time Collaboration",
-    "MongoDB",
-    "JWT Authentication",
-  ],
-  type: "Full Stack",
-}
+// {
+//   id: 3,
+//   title: "CodeDocs – Real-Time Document Collaboration",
+//   image: studyNotion, // add project image later
+//   description:
+//     "A real-time collaborative document editing platform that allows multiple users to edit documents simultaneously with live synchronization and version consistency.",
+//   tags: [
+//     "MERN Stack",
+//     "TypeScript",
+//     "Socket.io",
+//     "Real-Time Collaboration",
+//     "MongoDB",
+//     "JWT Authentication",
+//   ],
+//   type: "Full Stack",
+//   github: "https://github.com/your-username/ai-mock-interview",
+//   webapp: "https://ai-mock-interview.vercel.app",
+// }
 
 
 ];

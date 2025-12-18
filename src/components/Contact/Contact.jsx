@@ -73,7 +73,7 @@ const Contact = () => {
             variants={item}
             className="text-xl sm:text-2xl font-semibold text-white text-center mb-6"
           >
-            Let’s Connect 🤝
+            Let’s Connect 
           </motion.h3>
 
           <form onSubmit={handleSubmit} className="space-y-4">
