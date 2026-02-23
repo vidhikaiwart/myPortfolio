@@ -44,7 +44,7 @@ const Skills = () => (
       <h2 className="text-4xl sm:text-5xl font-bold text-white">
         SKILLS
       </h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-4 rounded-full" />
+      <div className="w-24 h-1 bg-gradient-to-r from-[#f43f5e] to-[#0d9488] mx-auto mt-4 rounded-full" />
       <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
         A collection of my technical skills and expertise.
       </p>
@@ -72,7 +72,7 @@ const Skills = () => (
               {category.title}
             </h3>
 
-            {/* 🔥 EQUAL SIZE GRID */}
+            {/* EQUAL SIZE GRID */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 auto-rows-fr">
               {category.skills.map((skill) => (
                 <motion.div
@@ -84,8 +84,11 @@ const Skills = () => (
                     w-full h-12 sm:h-14
                     px-3
                     rounded-full
-                    border border-[#8245ec]/30
-                    bg-[#8245ec]/5
+                    border border-[#f43f5e]/30
+                    bg-[#f43f5e]/5
+                    hover:border-[#0d9488]/50
+                    hover:bg-[#0d9488]/5
+                    transition-all duration-200
                   "
                 >
                   <img

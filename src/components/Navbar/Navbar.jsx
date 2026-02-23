@@ -31,28 +31,27 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
+    // { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled
-          ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md"
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${isScrolled
+          ? "bg-[#030712] bg-opacity-50 backdrop-blur-md shadow-md"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="text-white py-5 flex justify-between items-center">
-        
+
         {/* LOGO */}
         <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Dikesh</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Chouhan</span>
-          <span className="text-[#8245ec]">&gt;</span>
+          <span className="text-[#f43f5e]">&lt;</span>
+          <span className="text-white">Vidhi</span>
+          <span className="text-[#0d9488]">/</span>
+          <span className="text-white">Kaiwart</span>
+          <span className="text-[#f43f5e]">&gt;</span>
         </div>
 
         {/* DESKTOP MENU */}
@@ -60,9 +59,8 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
+              className={`cursor-pointer hover:text-[#f43f5e] transition-colors duration-200 ${activeSection === item.id ? "text-[#f43f5e]" : ""
+                }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
                 {item.label}
@@ -74,18 +72,18 @@ const Navbar = () => {
         {/* SOCIAL ICONS */}
         <div className="hidden md:flex space-x-4">
           <a
-            href="https://github.com/dikeshchouhan1"
+            href="https://github.com/vidhikaiwart"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#f43f5e] transition-colors duration-200"
           >
             <FaGithub size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/dikesh-chouhan-00a667239/"
+            href="https://www.linkedin.com/in/vidhikaiwart/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#0d9488] transition-colors duration-200"
           >
             <FaLinkedin size={24} />
           </a>
@@ -95,12 +93,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#f43f5e] cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#f43f5e] cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -109,14 +107,13 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg md:hidden">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#030712] bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg md:hidden">
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
+                className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-[#f43f5e]" : ""
+                  }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
                   {item.label}
@@ -126,18 +123,18 @@ const Navbar = () => {
 
             <div className="flex space-x-4 pt-2">
               <a
-                href="https://github.com/dikeshchouhan1"
+                href="https://github.com/vidhikaiwart"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="hover:text-[#f43f5e]"
               >
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/dikesh-chouhan-00a667239/"
+                href="https://www.linkedin.com/in/vidhikaiwart/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="hover:text-[#0d9488]"
               >
                 <FaLinkedin size={24} />
               </a>

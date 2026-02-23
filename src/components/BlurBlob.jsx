@@ -3,29 +3,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BlurBlob = ({ position, size }) => {
-  // Destructure position and size with default values
-  const { top, left } = position
-  const { width, height } = size 
+  const { top, left } = position;
+  const { width, height } = size;
 
   return (
     <div
-      className="absolute"
+      className="absolute pointer-events-none"
       style={{
         top: top,
         left: left,
         width: width,
         height: height,
-        transform: 'translate(-50%, -50%)',
       }}
     >
+      {/* Rose blob — top-left region */}
       <div
-        className="w-full h-full bg-purple-500 rounded-full opacity-20 blur-3xl animate-blob"
-      ></div>
+        className="absolute rounded-full bg-[#f43f5e] opacity-[0.12] blur-[120px] animate-blob"
+        style={{ top: '10%', left: '5%', width: '45%', height: '60%' }}
+      />
+      {/* Teal blob — bottom-right region */}
+      <div
+        className="absolute rounded-full bg-[#0d9488] opacity-[0.12] blur-[120px] animate-blob"
+        style={{ bottom: '10%', right: '5%', width: '40%', height: '55%', animationDelay: '3s' }}
+      />
     </div>
   );
 };
 
-// Define prop types
 BlurBlob.propTypes = {
   position: PropTypes.shape({
     top: PropTypes.string,

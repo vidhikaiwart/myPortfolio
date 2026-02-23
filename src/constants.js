@@ -11,13 +11,13 @@ import reactLogo from "./assets/tech_logo/reactjs.png";
 import reduxLogo from "./assets/tech_logo/redux.png";
 import tailwindLogo from "./assets/tech_logo/tailwindcss.png";
 import bootstrapLogo from "./assets/tech_logo/bootstrap.png";
-import gsapLogo from "./assets/tech_logo/gsap.png";
+// import gsapLogo from "./assets/tech_logo/gsap.png";
 
 // Backend
 import nodeLogo from "./assets/tech_logo/nodejs.png";
 import expressLogo from "./assets/tech_logo/express.png";
 import firebaseLogo from "./assets/tech_logo/firebase.png";
-import postgre from "./assets/tech_logo/postgre.png"
+// import postgre from "./assets/tech_logo/postgre.png"
 
 // Database
 import mongoLogo from "./assets/tech_logo/mongodb.png";
@@ -26,7 +26,7 @@ import sqlLogo from "./assets/tech_logo/mysql.png";
 // Languages
 import cppLogo from "./assets/tech_logo/cpp.png";
 import python from "./assets/tech_logo/python.png"
-import c from "./assets/tech_logo/c.png"
+// import c from "./assets/tech_logo/c.png"
 
 // Tools
 import gitLogo from "./assets/tech_logo/git.png";
@@ -39,12 +39,15 @@ import postmanLogo from "./assets/tech_logo/postman.png";
 /* ---- Experience / Education / Project Logos ---- */
 import AaharMenu from "./assets/company_logo/AaharMenu.jpg"
 import Lcit from "./assets/education_logo/lcit.webp"
-import Jindal from "./assets/education_logo/jindal.png"
+import school from "./assets/education_logo/school.png"
+import polytechnic from "./assets/education_logo/polytechnic.jpg"
 /* ====================================
    project
 ===================================== */
 import studyNotion from "./assets/work_logo/StudyNotion.png"
-import aiMock from "./assets/work_logo/AiMock.png"
+// import aiMock from "./assets/work_logo/AiMock.png"
+import yourspace from "./assets/work_logo/YourSpace.png"
+import chat from "./assets/work_logo/Chat.png"
 import devtinder from "./assets/work_logo/Devtinder.png"
 
 export const SkillsInfo = [
@@ -58,7 +61,7 @@ export const SkillsInfo = [
       { name: "Redux ", logo: reduxLogo },
       { name: "Tailwind CSS", logo: tailwindLogo },
       { name: "Bootstrap", logo: bootstrapLogo },
-      { name: "GSAP", logo: gsapLogo },
+      // { name: "GSAP", logo: gsapLogo },
     ],
   },
   {
@@ -67,11 +70,11 @@ export const SkillsInfo = [
       { name: "Node.js", logo: nodeLogo },
       { name: "Express.js", logo: expressLogo },
      
-   
+      {name:"Firebase", logo: firebaseLogo},
      
        { name: "MongoDB", logo: mongoLogo },
       { name: "SQL", logo: sqlLogo },
-      { name: "Postgre", logo: postgre },
+      // { name: "Postgre", logo: postgre },
      
     ],
   },
@@ -82,7 +85,7 @@ export const SkillsInfo = [
       { name: "C++ ", logo: cppLogo },
       { name: "JavaScript", logo: jsLogo },
       { name: "python", logo: python},
-      { name: "C", logo: c},
+      // { name: "C", logo: c},
     ],
   },
   {
@@ -124,37 +127,31 @@ export const experiences = [
 
 export const education = [
   {
-    id: 0,
-    img: Lcit,
-    school: "Lakhmi Chand Institute of Technology",
-    location: "Bilaspur, Chhattisgarh",
-    degree: "Bachelor of Technology (B.Tech)",
-    field: "Computer Science Engineering",
+    id: 1,
+    degree: "B.Tech in Computer Science Engineering",
+    school: "Lakhmi Chand Institute of Technology, Bilaspur, Chhattisgarh",
     date: "2021 - 2025",
-    desc:
-      "Pursuing B.Tech with strong fundamentals in Data Structures, Algorithms, Web Development, and Software Engineering.",
+    grade: "82.07%",
+    desc: "Focused on core computer science subjects including Data Structures, Algorithms, Web Development, Databases, and Software Engineering. Gained hands-on experience through full-stack MERN projects.",
+    img: Lcit,
   },
   {
-    id: 1,
-    img: Jindal,
-    school: "Jindal Adarsh School",
-    location: "Chhattisgarh",
-    degree: "Class XII (CGBSE)",
-    date: "2021",
-    grade: "96.2%",
-    desc:
-      "Completed higher secondary education with excellent academic performance.",
+    id: 2,
+    degree: "Diploma in Computer Science Engineering",
+    school: "Government Girls Polytechnic",
+    date: "2022",
+    grade: "75.09%",
+    desc: "Built strong fundamentals in programming, computer networks, operating systems, and database management systems.",
+    img: polytechnic,
   },
   {
     id: 3,
-    img: Jindal,
-    school: "Jindal Adarsh School",
-    location: "Chhattisgarh",
     degree: "Class X (CGBSE)",
-    date: "2021",
-    grade: "77.2%",
-   desc: "Successfully completed Class X under CGBSE with consistent academic performance."
-
+    school: "Sent Joseph Convent School",
+    date: "2019",
+    grade: "80.66%",
+    desc: "Completed secondary education with a strong academic foundation in mathematics, science, and logical reasoning.",
+    img: school,
   },
 ];
 
@@ -165,38 +162,41 @@ export const education = [
 export const projects = [
   {
   id: 0,
-  title: "AI Mock Interview Platform",
-  image: aiMock,
+  title: "Online Rental & Property Listing Platform",
+  image: yourspace,
   description:
-    "AI-powered interview preparation platform using OpenAI GPT-4 with real-time feedback, Firebase authentication, and a serverless backend.",
+    "A full-stack rental platform that allows users to list, search, and manage rental properties with secure authentication, image uploads, and real-time communication between tenants and owners.",
   tags: [
     "React.js",
     "Tailwind CSS",
-    "Shadcn UI",
-    "Firebase",
-    "OpenAI GPT-4",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "Cloudinary"
   ],
   type: "Full Stack",
-  github: "https://github.com/dikeshchouhan1/AI_Mock_Interview",
+  // github: "https://github.com/dikeshchouhan1/AI_Mock_Interview",
 
 }
 ,
   {
     id: 1,
-    title: "StudyNotion E-Tech Platform",
-    image: studyNotion,
+    title: "Real-Time Communication Platform",
+    image: chat,
     description:
-      "A full-stack course platform with authentication, payments, OTP-based password reset, and Redux state management.",
+      "A MERN stack rental platform featuring property listings, advanced search filters, secure authentication, image uploads, and real-time chat between tenants and property owners using Socket.IO.",
     tags: [
       "MERN Stack",
       "Redux",
       "JWT",
       "Nodemailer",
       "MongoDB",
+      "Socket.IO",  
     ],
     type: "Full Stack",
-    github: "https://github.com/dikeshchouhan1/EdTech",
-  webapp: "https://study-notion-frontend-one-psi.vercel.app/",
+    // github: "https://github.com/dikeshchouhan1/EdTech",
+  // webapp: "https://study-notion-frontend-one-psi.vercel.app/",
   },
   {
   id: 2,
@@ -213,7 +213,7 @@ export const projects = [
     "React.js",
   ],
   type: "Full Stack",
-  github: "https://github.com/dikeshchouhan1/DevTinder_Frontend",
+  // github: "https://github.com/dikeshchouhan1/DevTinder_Frontend",
 
 },
 // {

@@ -42,7 +42,7 @@ const Education = () => {
         <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-wide">
           EDUCATION
         </h2>
-        <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-4 rounded-full" />
+        <div className="w-24 h-1 bg-gradient-to-r from-[#f43f5e] to-[#0d9488] mx-auto mt-4 rounded-full" />
         <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-base sm:text-lg">
           My academic journey showcasing consistent learning, growth, and
           development over the years.
@@ -53,7 +53,7 @@ const Education = () => {
       <div className="relative">
         {/* Vertical Line */}
         <div className="hidden sm:block absolute left-1/2 top-0 h-full w-[2px]
-        bg-gradient-to-b from-purple-500 to-transparent" />
+        bg-gradient-to-b from-[#f43f5e] via-[#0d9488] to-transparent" />
 
         {/* Education Cards */}
         {education.map((edu, index) => (
@@ -63,14 +63,13 @@ const Education = () => {
             initial={index % 2 === 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="show"
             viewport={{ once: true }}
-            className={`relative mb-20 flex flex-col sm:flex-row ${
-              index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
-            }`}
+            className={`relative mb-20 flex flex-col sm:flex-row ${index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
+              }`}
           >
             {/* Timeline Dot */}
             <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 z-20">
-              <div className="w-14 h-14 rounded-full bg-gray-900 border-4 border-[#8245ec]
-              flex items-center justify-center shadow-lg">
+              <div className="w-14 h-14 rounded-full bg-gray-900 border-4 border-[#f43f5e]
+              flex items-center justify-center shadow-[0_0_20px_rgba(244,63,94,0.4)]">
                 <img
                   src={edu.img}
                   alt={edu.school}
@@ -83,8 +82,8 @@ const Education = () => {
             <div
               className={`w-full sm:w-[420px] bg-gray-900/80 backdrop-blur-xl
               border border-white/10 rounded-2xl p-6 sm:p-8
-              shadow-[0_0_30px_rgba(130,69,236,0.25)]
-              hover:shadow-[0_0_45px_rgba(130,69,236,0.45)]
+              shadow-[0_0_30px_rgba(244,63,94,0.2)]
+              hover:shadow-[0_0_45px_rgba(244,63,94,0.4)]
               transform transition-all duration-300 hover:-translate-y-2
               ${index % 2 === 0 ? "sm:mr-auto" : "sm:ml-auto"}`}
             >
@@ -112,7 +111,7 @@ const Education = () => {
               </div>
 
               {/* Details */}
-              <p className="mt-4 text-sm text-purple-300 font-medium">
+              <p className="mt-4 text-sm text-[#0d9488] font-medium">
                 Grade: {edu.grade}
               </p>
               <p className="mt-3 text-sm text-gray-400 leading-relaxed">

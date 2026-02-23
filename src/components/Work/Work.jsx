@@ -22,9 +22,10 @@ const Work = () => {
       className="relative py-20 px-4 sm:px-10 md:px-[8vw] lg:px-[18vw]"
     >
       {/* Title */}
-      <h2 className="text-3xl sm:text-5xl font-bold text-white text-center mb-14">
+      <h2 className="text-3xl sm:text-5xl font-bold text-white text-center mb-4">
         Projects
       </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-[#f43f5e] to-[#0d9488] mx-auto mb-14 rounded-full" />
 
       {/* PROJECT GRID */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
@@ -39,8 +40,9 @@ const Work = () => {
             className="
               cursor-pointer bg-gray-900/80
               border border-white/10 rounded-2xl
-              shadow-lg hover:shadow-purple-600/40
-              transition overflow-hidden
+              shadow-lg hover:shadow-[0_0_30px_rgba(244,63,94,0.35)]
+              hover:border-[#f43f5e]/30
+              transition-all duration-300 overflow-hidden
             "
           >
             <div className="aspect-[16/9] bg-black/30">
@@ -63,7 +65,7 @@ const Work = () => {
         ))}
       </div>
 
-      {/* 🔥 SIMPLE PAGE VIEW */}
+      {/* SIMPLE PAGE VIEW */}
       <AnimatePresence>
         {activeProject && (
           <motion.div
@@ -72,18 +74,18 @@ const Work = () => {
             animate="show"
             exit="exit"
             className="
-              fixed inset-0 z-50 bg-[#0b0b16]
+              fixed inset-0 z-50 bg-[#030712]
               overflow-y-auto
             "
           >
             {/* Header */}
-            <div className="sticky top-0 bg-[#0b0b16] border-b border-white/10 p-4 flex justify-between items-center">
+            <div className="sticky top-0 bg-[#030712] border-b border-white/10 p-4 flex justify-between items-center">
               <h3 className="text-white text-xl font-semibold">
                 {activeProject.title}
               </h3>
               <button
                 onClick={() => setActiveProject(null)}
-                className="text-3xl text-white hover:text-purple-500"
+                className="text-3xl text-white hover:text-[#f43f5e] transition-colors"
               >
                 &times;
               </button>
@@ -108,7 +110,7 @@ const Work = () => {
                 {activeProject.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs rounded-full bg-purple-600/20 text-purple-300"
+                    className="px-3 py-1 text-xs rounded-full bg-[#f43f5e]/20 text-[#f43f5e]"
                   >
                     #{tag}
                   </span>
@@ -121,7 +123,7 @@ const Work = () => {
                   href={activeProject.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center bg-gray-800 hover:bg-purple-700 text-white py-2 rounded-md"
+                  className="flex-1 text-center bg-gray-800 hover:bg-[#f43f5e]/80 text-white py-2 rounded-md transition-colors duration-300"
                 >
                   View Code
                 </a>
@@ -129,7 +131,7 @@ const Work = () => {
                   href={activeProject.webapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center bg-purple-600 hover:bg-purple-800 text-white py-2 rounded-md"
+                  className="flex-1 text-center bg-gradient-to-r from-[#f43f5e] to-[#0d9488] hover:opacity-90 text-white py-2 rounded-md transition-opacity duration-300"
                 >
                   View Live
                 </a>

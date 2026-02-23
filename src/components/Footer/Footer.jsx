@@ -19,10 +19,10 @@ const Footer = () => {
   return (
     <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
       <div className="container mx-auto text-center">
-        
+
         {/* Name / Logo */}
-        <h2 className="text-xl font-semibold text-purple-500">
-          Dikesh Chouhan
+        <h2 className="text-xl font-semibold bg-gradient-to-r from-[#f43f5e] to-[#0d9488] bg-clip-text text-transparent">
+          Vidhi Kaiwart
         </h2>
 
         {/* Navigation Links */}
@@ -30,14 +30,14 @@ const Footer = () => {
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
+            // { name: "Experience", id: "experience" },
             { name: "Projects", id: "work" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1"
+              className="hover:text-[#f43f5e] transition-colors duration-200 text-sm sm:text-base my-1"
             >
               {item.name}
             </button>
@@ -56,16 +56,19 @@ const Footer = () => {
             <a
               key={index}
               href={item.link}
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              className="text-xl hover:text-[#f43f5e] transition-all duration-200 transform hover:scale-110"
             >
               {item.icon}
             </a>
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#f43f5e]/30 to-transparent mt-6 mb-4" />
+
         {/* Copyright */}
-        <p className="text-sm text-gray-400 mt-6">
-          © 2025 Dikesh Chouhan. All rights reserved.
+        <p className="text-sm text-gray-500">
+          © 2025 Vidhi Kaiwart. All rights reserved.
         </p>
       </div>
     </footer>
