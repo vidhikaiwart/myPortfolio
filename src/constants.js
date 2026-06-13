@@ -11,13 +11,11 @@ import reactLogo from "./assets/tech_logo/reactjs.png";
 import reduxLogo from "./assets/tech_logo/redux.png";
 import tailwindLogo from "./assets/tech_logo/tailwindcss.png";
 import bootstrapLogo from "./assets/tech_logo/bootstrap.png";
-// import gsapLogo from "./assets/tech_logo/gsap.png";
 
 // Backend
 import nodeLogo from "./assets/tech_logo/nodejs.png";
 import expressLogo from "./assets/tech_logo/express.png";
 import firebaseLogo from "./assets/tech_logo/firebase.png";
-// import postgre from "./assets/tech_logo/postgre.png"
 
 // Database
 import mongoLogo from "./assets/tech_logo/mongodb.png";
@@ -26,7 +24,6 @@ import sqlLogo from "./assets/tech_logo/mysql.png";
 // Languages
 import cppLogo from "./assets/tech_logo/cpp.png";
 import python from "./assets/tech_logo/python.png"
-// import c from "./assets/tech_logo/c.png"
 
 // Tools
 import gitLogo from "./assets/tech_logo/git.png";
@@ -37,17 +34,15 @@ import vercel from "./assets/tech_logo/vercel.png"
 import postmanLogo from "./assets/tech_logo/postman.png";
 
 /* ---- Experience / Education / Project Logos ---- */
-import AaharMenu from "./assets/company_logo/AaharMenu.jpg"
 import Lcit from "./assets/education_logo/lcit.webp"
 import school from "./assets/education_logo/school.png"
 import polytechnic from "./assets/education_logo/polytechnic.jpg"
 /* ====================================
    project
 ===================================== */
-import studyNotion from "./assets/work_logo/StudyNotion.png"
-// import aiMock from "./assets/work_logo/AiMock.png"
-import yourspace from "./assets/work_logo/YourSpace.png"
-import chat from "./assets/work_logo/Chat.png"
+
+import yourspace from "./assets/work_logo/yourspace.png"
+import chat from "./assets/work_logo/chat.png"
 import devtinder from "./assets/work_logo/Devtinder.png"
 
 export const SkillsInfo = [
@@ -69,22 +64,22 @@ export const SkillsInfo = [
     skills: [
       { name: "Node.js", logo: nodeLogo },
       { name: "Express.js", logo: expressLogo },
-     
-      {name:"Firebase", logo: firebaseLogo},
-     
-       { name: "MongoDB", logo: mongoLogo },
+
+      { name: "Firebase", logo: firebaseLogo },
+
+      { name: "MongoDB", logo: mongoLogo },
       { name: "SQL", logo: sqlLogo },
       // { name: "Postgre", logo: postgre },
-     
+
     ],
   },
-  
+
   {
     title: "Languages & DSA",
     skills: [
       { name: "C++ ", logo: cppLogo },
       { name: "JavaScript", logo: jsLogo },
-      { name: "python", logo: python},
+      { name: "python", logo: python },
       // { name: "C", logo: c},
     ],
   },
@@ -98,26 +93,6 @@ export const SkillsInfo = [
       { name: "Postman", logo: postmanLogo },
       { name: "vercel", logo: vercel },
     ],
-  },
-];
-
-/* =====================================
-   EXPERIENCE
-===================================== */
-
-export const experiences = [
-  {
-    id: 0,
-    img: AaharMenu,
-    role: "Frontend Developer (Intern)",
-    company: "Aaharmenu",
-    date: "Internship",
-    desc: [
-      "Built responsive websites using HTML, CSS, and Bootstrap.",
-      "Created animations and interactions using JavaScript and GSAP.",
-      "Improved performance and overall user experience.",
-    ],
-    skills: ["HTML", "CSS", "Bootstrap", "JavaScript", "GSAP"],
   },
 ];
 
@@ -161,25 +136,23 @@ export const education = [
 
 export const projects = [
   {
-  id: 0,
-  title: "Online Rental & Property Listing Platform",
-  image: yourspace,
-  description:
-    "A full-stack rental platform that allows users to list, search, and manage rental properties with secure authentication, image uploads, and real-time communication between tenants and owners.",
-  tags: [
-    "React.js",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JWT Authentication",
-    "Cloudinary"
-  ],
-  type: "Full Stack",
-  // github: "https://github.com/dikeshchouhan1/AI_Mock_Interview",
-
-}
-,
+    id: 0,
+    title: "Online Rental & Property Listing Platform",
+    image: yourspace,
+    description:
+      "A full-stack rental platform that allows users to list, search, and manage rental properties with secure authentication, image uploads, and real-time communication between tenants and owners.",
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT Authentication",
+      "Cloudinary"
+    ],
+    type: "Full Stack",
+  }
+  ,
   {
     id: 1,
     title: "Real-Time Communication Platform",
@@ -192,63 +165,39 @@ export const projects = [
       "JWT",
       "Nodemailer",
       "MongoDB",
-      "Socket.IO",  
+      "Socket.IO",
     ],
     type: "Full Stack",
-    // github: "https://github.com/dikeshchouhan1/EdTech",
-  // webapp: "https://study-notion-frontend-one-psi.vercel.app/",
   },
   {
-  id: 2,
-  title: "DevTinder – Developer Connection App",
-  image: devtinder, // add project image later
-  description:
-    "A MERN stack-based developer connection platform where users can create profiles, swipe to connect, send connection requests, and build professional networks.",
-  tags: [
-    "MERN Stack",
-    "JWT Authentication",
-    "MongoDB",
-    "Node.js",
-    "Express.js",
-    "React.js",
-  ],
-  type: "Full Stack",
-  // github: "https://github.com/dikeshchouhan1/DevTinder_Frontend",
-
-},
-// {
-//   id: 3,
-//   title: "CodeDocs – Real-Time Document Collaboration",
-//   image: studyNotion, // add project image later
-//   description:
-//     "A real-time collaborative document editing platform that allows multiple users to edit documents simultaneously with live synchronization and version consistency.",
-//   tags: [
-//     "MERN Stack",
-//     "TypeScript",
-//     "Socket.io",
-//     "Real-Time Collaboration",
-//     "MongoDB",
-//     "JWT Authentication",
-//   ],
-//   type: "Full Stack",
-//   github: "https://github.com/your-username/ai-mock-interview",
-//   webapp: "https://ai-mock-interview.vercel.app",
-// }
-
-
+    id: 2,
+    title: "DevTinder – Developer Connection App",
+    image: devtinder,
+    description:
+      "A MERN stack-based developer connection platform where users can create profiles, swipe to connect, send connection requests, and build professional networks.",
+    tags: [
+      "MERN Stack",
+      "JWT Authentication",
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+      "React.js",
+    ],
+    type: "Full Stack",
+  }
 ];
 
 /* =====================================
    ACHIEVEMENTS
 ===================================== */
 
-export const achievements = [
-  {
-    platform: "LeetCode",
-    detail: "330+ problems solved (Easy, Medium, Hard)",
-  },
-  {
-    platform: "GeeksforGeeks",
-    detail: "150+ DSA problems solved",
-  },
-];
+// export const achievements = [
+//   {
+//     platform: "LeetCode",
+//     detail: "330+ problems solved (Easy, Medium, Hard)",
+//   },
+//   {
+//     platform: "GeeksforGeeks",
+//     detail: "150+ DSA problems solved",
+//   },
+// ];

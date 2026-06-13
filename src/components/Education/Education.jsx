@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 const cardVariants = {
   hiddenLeft: {
     opacity: 0,
-    x: -80,
-    scale: 0.95,
+    y: 40,
+    scale: 0.97,
   },
   hiddenRight: {
     opacity: 0,
-    x: 80,
-    scale: 0.95,
+    y: 40,
+    scale: 0.97,
   },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     scale: 1,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
 };
@@ -62,7 +62,7 @@ const Education = () => {
             variants={cardVariants}
             initial={index % 2 === 0 ? "hiddenLeft" : "hiddenRight"}
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1 }}
             className={`relative mb-20 flex flex-col sm:flex-row ${index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
               }`}
           >

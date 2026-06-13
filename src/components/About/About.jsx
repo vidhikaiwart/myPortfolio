@@ -59,7 +59,7 @@ const About = () => {
 
           {/* DOWNLOAD CV BUTTON */}
           <a
-            href="https://drive.google.com/file/d/1zIBP-Xd3GjLXiRxs40vPBujQJGIJoAT5/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1Fd8RPByyFDJHXN4lGPLTFqTJu76sKNcJ/view"
             target="_blank"
             rel="noopener noreferrer"
             className="

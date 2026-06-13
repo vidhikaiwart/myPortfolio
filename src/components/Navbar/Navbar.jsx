@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,6 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    // { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
   ];
@@ -87,6 +87,22 @@ const Navbar = () => {
           >
             <FaLinkedin size={24} />
           </a>
+          <a
+            href="https://leetcode.com/u/Vidhi_Kaiwart/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#ffa116] transition-colors duration-200"
+          >
+            <SiLeetcode size={24} />
+          </a>
+          <a
+            href="https://www.geeksforgeeks.org/profile/vidhika01r0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#2f8d46] transition-colors duration-200"
+          >
+            <SiGeeksforgeeks size={24} />
+          </a>
         </div>
 
         {/* MOBILE ICON */}
@@ -137,6 +153,22 @@ const Navbar = () => {
                 className="hover:text-[#0d9488]"
               >
                 <FaLinkedin size={24} />
+              </a>
+              <a
+                href="https://leetcode.com/u/Vidhi_Kaiwart/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#ffa116]"
+              >
+                <SiLeetcode size={24} />
+              </a>
+              <a
+                href="https://www.geeksforgeeks.org/profile/vidhika01r0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#2f8d46]"
+              >
+                <SiGeeksforgeeks size={24} />
               </a>
             </div>
           </ul>
