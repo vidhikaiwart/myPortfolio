@@ -97,6 +97,29 @@ export const SkillsInfo = [
 ];
 
 /* =====================================
+   EXPERIENCE
+===================================== */
+
+export const experiences = [
+  {
+    id: 1,
+    role: "Software Developer Intern",
+    company: "Laymotion",
+    date: "11 May 2026 - 12 Aug 2026",
+    location: "Delhi, India",
+    issuedBy: "Vinay Kumar (Founder & CEO)",
+    certificateNo: "LM/INT/2026/0001",
+    desc: "Contributed to various development tasks and full-stack web projects. Gained hands-on experience in building scalable web solutions, writing clean code, collaborating with teams, and implementing key features.",
+    skills: ["React.js", "Node.js", "MongoDB", "JavaScript", "Git"],
+    img: null,
+    documents: [
+      { title: "Certificate of Internship", type: "certificate", url: null },
+      { title: "Experience Letter", type: "letter", url: null },
+    ],
+  },
+];
+
+/* =====================================
    EDUCATION
 ===================================== */
 
