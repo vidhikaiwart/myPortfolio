@@ -121,15 +121,24 @@ const Experience = () => {
                 {exp.desc}
               </p>
 
-              {/* Extra Details (Certificate No. & Location) */}
-              {(exp.location || exp.certificateNo) && (
-                <div className="mt-3 text-xs text-gray-400 space-y-1">
-                  {exp.location && (
-                    <p><span className="text-gray-500">📍 Location:</span> {exp.location}</p>
-                  )}
-                  {exp.certificateNo && (
-                    <p><span className="text-gray-500">📜 Certificate No:</span> {exp.certificateNo}</p>
-                  )}
+              {/* Highlights Bullet List */}
+              {exp.highlights && (
+                <ul className="mt-3 space-y-1.5 list-disc list-inside text-xs text-gray-400">
+                  {exp.highlights.map((item, hIdx) => (
+                    <li key={hIdx} className="leading-relaxed">
+                      <span className="text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Location & Type */}
+              {exp.location && (
+                <div className="mt-4 text-xs text-gray-400 flex items-center justify-between border-t border-white/5 pt-3">
+                  <span>📍 {exp.location}</span>
+                  <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-gray-300 font-medium">
+                    {exp.type}
+                  </span>
                 </div>
               )}
 
@@ -139,31 +148,10 @@ const Experience = () => {
                   {exp.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                      className="text-xs px-2.5 py-1 rounded-full bg-[#0d9488]/10 border border-[#0d9488]/30 text-[#0d9488]"
                     >
                       {skill}
                     </span>
-                  ))}
-                </div>
-              )}
-
-              {/* Certificate & Experience Letter Buttons */}
-              {exp.documents && exp.documents.length > 0 && (
-                <div className="mt-5 pt-4 border-t border-white/10 flex flex-wrap gap-3">
-                  {exp.documents.map((doc, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => doc.url && setSelectedDoc(doc)}
-                      disabled={!doc.url}
-                      className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all duration-200 flex items-center gap-1.5 ${doc.url
-                          ? "bg-[#0d9488]/20 border-[#0d9488]/50 text-[#0d9488] hover:bg-[#0d9488] hover:text-white cursor-pointer shadow-[0_0_15px_rgba(13,148,136,0.3)]"
-                          : "bg-white/5 border-white/10 text-gray-400 cursor-not-allowed"
-                        }`}
-                    >
-                      <span>📜</span>
-                      <span>{doc.title}</span>
-                      {!doc.url && <span className="text-[10px] text-gray-500">(Add Image)</span>}
-                    </button>
                   ))}
                 </div>
               )}

@@ -33,13 +33,14 @@ const Navbar = () => {
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
+    { id: "certifications", label: "Certifications" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${isScrolled
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[4vw] md:px-[5vw] lg:px-[8vw] ${isScrolled
         ? "bg-[#030712] bg-opacity-50 backdrop-blur-md shadow-md"
         : "bg-transparent"
         }`}
@@ -56,14 +57,17 @@ const Navbar = () => {
         </div>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex items-center space-x-1 lg:space-x-3 text-gray-300">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#f43f5e] transition-colors duration-200 ${activeSection === item.id ? "text-[#f43f5e]" : ""
+              className={`cursor-pointer transition-colors duration-200 ${activeSection === item.id ? "text-[#f43f5e]" : ""
                 }`}
             >
-              <button onClick={() => handleMenuItemClick(item.id)}>
+              <button
+                onClick={() => handleMenuItemClick(item.id)}
+                className="px-3 py-1.5 rounded-lg hover:text-[#f43f5e] hover:bg-white/5 transition-all duration-200 text-sm lg:text-base font-medium"
+              >
                 {item.label}
               </button>
             </li>

@@ -37,6 +37,7 @@ import postmanLogo from "./assets/tech_logo/postman.png";
 import Lcit from "./assets/education_logo/lcit.webp"
 import school from "./assets/education_logo/school.png"
 import polytechnic from "./assets/education_logo/polytechnic.jpg"
+import bitDurg from "./assets/education_logo/bit_durg.jpeg"
 /* ====================================
    project
 ===================================== */
@@ -106,16 +107,15 @@ export const experiences = [
     role: "Software Developer Intern",
     company: "Laymotion",
     date: "11 May 2026 - 12 Aug 2026",
-    location: "Delhi, India",
-    issuedBy: "Vinay Kumar (Founder & CEO)",
-    certificateNo: "LM/INT/2026/0001",
-    desc: "Contributed to various development tasks and full-stack web projects. Gained hands-on experience in building scalable web solutions, writing clean code, collaborating with teams, and implementing key features.",
-    skills: ["React.js", "Node.js", "MongoDB", "JavaScript", "Git"],
-    img: null,
-    documents: [
-      { title: "Certificate of Internship", type: "certificate", url: null },
-      { title: "Experience Letter", type: "letter", url: null },
+    location: "Delhi, India (Remote)",
+    type: "Internship",
+    desc: "Engineered scalable web applications using the MERN stack. Designed responsive user interfaces in React.js with modern styling, integrated robust RESTful APIs in Node.js & Express, optimized MongoDB queries, and collaborated across cross-functional teams to deliver high-performance production features.",
+    highlights: [
+      "Developed modular React components reducing UI render time and enhancing user experience.",
+      "Integrated secure authentication mechanisms and REST API endpoints using Express & MongoDB.",
+      "Collaborated in Agile sprints, utilizing Git/GitHub for version control and efficient code reviews.",
     ],
+    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "JavaScript", "REST APIs", "Git & GitHub"],
   },
 ];
 
@@ -126,6 +126,15 @@ export const experiences = [
 export const education = [
   {
     id: 1,
+    degree: "M.Tech in Data Science",
+    school: "Bhilai Institute of Technology, Durg, Chhattisgarh",
+    date: "2026 - 2028",
+    grade: "Pursuing",
+    desc: "Specializing in Data Science, Machine Learning, Data Analytics, Advanced Algorithms, and Artificial Intelligence.",
+    img: bitDurg,
+  },
+  {
+    id: 2,
     degree: "B.Tech in Computer Science Engineering",
     school: "Lakhmi Chand Institute of Technology, Bilaspur, Chhattisgarh",
     date: "2021 - 2025",
@@ -134,7 +143,7 @@ export const education = [
     img: Lcit,
   },
   {
-    id: 2,
+    id: 3,
     degree: "Diploma in Computer Science Engineering",
     school: "Government Girls Polytechnic",
     date: "2022",
@@ -143,7 +152,7 @@ export const education = [
     img: polytechnic,
   },
   {
-    id: 3,
+    id: 4,
     degree: "Class X (CGBSE)",
     school: "Sent Joseph Convent School",
     date: "2019",
