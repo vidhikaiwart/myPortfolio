@@ -119,22 +119,26 @@ const Work = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={activeProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center bg-gray-800 hover:bg-[#f43f5e]/80 text-white py-2 rounded-md transition-colors duration-300"
-                >
-                  View Code
-                </a>
-                <a
-                  href={activeProject.webapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center bg-gradient-to-r from-[#f43f5e] to-[#0d9488] hover:opacity-90 text-white py-2 rounded-md transition-opacity duration-300"
-                >
-                  View Live
-                </a>
+                {activeProject.github && (
+                  <a
+                    href={activeProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center bg-gray-800 hover:bg-[#f43f5e]/80 text-white py-2 rounded-md transition-colors duration-300"
+                  >
+                    View Code
+                  </a>
+                )}
+                {activeProject.webapp && (
+                  <a
+                    href={activeProject.webapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center bg-gradient-to-r from-[#f43f5e] to-[#0d9488] hover:opacity-90 text-white py-2 rounded-md transition-opacity duration-300"
+                  >
+                    View Live
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

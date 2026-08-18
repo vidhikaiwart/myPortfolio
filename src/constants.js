@@ -23,13 +23,14 @@ import sqlLogo from "./assets/tech_logo/mysql.png";
 
 // Languages
 import cppLogo from "./assets/tech_logo/cpp.png";
-import python from "./assets/tech_logo/python.png"
+import python from "./assets/tech_logo/python.png";
+import javaLogo from "./assets/tech_logo/java.png";
 
 // Tools
 import gitLogo from "./assets/tech_logo/git.png";
 import githubLogo from "./assets/tech_logo/github.png";
 import vscodeLogo from "./assets/tech_logo/vscode.png";
-import vercel from "./assets/tech_logo/vercel.png"
+import vercel from "./assets/tech_logo/vercel.png";
 
 import postmanLogo from "./assets/tech_logo/postman.png";
 
@@ -45,6 +46,9 @@ import bitDurg from "./assets/education_logo/bit_durg.jpeg"
 import yourspace from "./assets/work_logo/yourspace.png"
 import chat from "./assets/work_logo/chat.png"
 import devtinder from "./assets/work_logo/Devtinder.png"
+import naviratas from "./assets/work_logo/naviratas.png"
+import admanpower from "./assets/work_logo/admanpower.png"
+import shopnow from "./assets/work_logo/shopnow.png"
 
 export const SkillsInfo = [
   {
@@ -78,6 +82,7 @@ export const SkillsInfo = [
   {
     title: "Languages & DSA",
     skills: [
+      { name: "Java", logo: javaLogo },
       { name: "C++ ", logo: cppLogo },
       { name: "JavaScript", logo: jsLogo },
       { name: "python", logo: python },
@@ -169,6 +174,53 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "Naviratas – Global Certification Body Platform",
+    image: naviratas,
+    description:
+      "A modern corporate certification platform enabling organizations to explore courses, verify certificates online, request business consultations, and access auditing & ISO certification services.",
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST APIs"
+    ],
+    type: "Frontend",
+    webapp: "https://dev.naviratas.com/",
+  },
+  {
+    id: 1,
+    title: "AD Manpower – Workforce & Business Management Platform",
+    image: admanpower,
+    description:
+      "An expert manpower solutions web application for business operations management, featuring active job listings, employer services, candidate management, and an admin portal.",
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ],
+    type: "Full Stack",
+    webapp: "https://www.admanpowerenterprises.com/",
+  },
+  {
+    id: 2,
+    title: "ShopNow – E-Commerce & Everyday Essentials Platform",
+    image: shopnow,
+    description:
+      "A full-stack e-commerce web application featuring curated product collections, user authentication, interactive product search, cart management, and seamless online shopping experience.",
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs"
+    ],
+    type: "Full Stack",
+  },
+  {
+    id: 3,
     title: "Online Rental & Property Listing Platform",
     image: yourspace,
     description:
@@ -183,10 +235,9 @@ export const projects = [
       "Cloudinary"
     ],
     type: "Full Stack",
-  }
-  ,
+  },
   {
-    id: 1,
+    id: 4,
     title: "Real-Time Communication Platform",
     image: chat,
     description:
@@ -202,7 +253,7 @@ export const projects = [
     type: "Full Stack",
   },
   {
-    id: 2,
+    id: 5,
     title: "DevTinder – Developer Connection App",
     image: devtinder,
     description:
